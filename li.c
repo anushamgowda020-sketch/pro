@@ -38,5 +38,11 @@ break;
 }
 getch()
 }
+/*day 2 program*/
+  #include<stdio.h>
+void main()
+{
+  printf("Hello guys Good Morning and welcome to my class");
+}
 
 
