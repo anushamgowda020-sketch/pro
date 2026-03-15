@@ -77,3 +77,32 @@ printf("\n The root 1 is %lf+i %lf =",rp,img);
 printf("\n The root 2 is %lf+i %lf =",rp,img);
 }
 }
+/* day 4*/
+#include<stdio.h>
+#include<conio>h>
+  void main()
+  {
+char op ;
+clrscr();
+printf("Enter the operator of your choice for further operations\n");
+scanf("%c",&op);
+switch(op)
+{
+case '+':
+printf("The sum of two numbers will be displayed by using this:");
+break;
+case '-':
+printf("The difference of two numbers will be displayed by using this:");
+break;
+case '*':
+printf("The product of two numbers can be displayed by using this");
+break;
+case '/':
+printf("The quotient of two numbers will be calculated by using this");
+break;
+default:
+printf("You have entered other operator");
+break;
+}
+getch()
+}
