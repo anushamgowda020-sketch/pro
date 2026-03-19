@@ -237,3 +237,102 @@ int main() {
 
     return 0;
 }
+/* day 8 - pro 1*/
+#include <stdio.h>
+int main() {
+    int num, original, rem, result = 0;
+    printf("Enter number: ");
+    scanf("%d", &num);
+
+    original = num;
+
+    while (num != 0) {
+        rem = num % 10;
+        result += rem * rem * rem;
+        num /= 10;
+    }
+
+    if (result == original)
+        printf("Armstrong Number");
+    else
+        printf("Not Armstrong");
+
+    return 0;
+}
+/* day 8 - pro 2*/
+#include <stdio.h>
+int main() {
+    int num, rev = 0;
+    printf("Enter number: ");
+    scanf("%d", &num);
+
+    while (num != 0) {
+        rev = rev * 10 + num % 10;
+        num /= 10;
+    }
+
+    printf("Reversed: %d", rev);
+    return 0;
+}
+/* day 8 - pro 3*/
+#include <stdio.h>
+int main() {
+    int a[2][2], b[2][2], sum[2][2];
+
+    printf("Enter elements of matrix A:\n");
+    for(int i=0;i<2;i++)
+        for(int j=0;j<2;j++)
+            scanf("%d",&a[i][j]);
+
+    printf("Enter elements of matrix B:\n");
+    for(int i=0;i<2;i++)
+        for(int j=0;j<2;j++)
+            scanf("%d",&b[i][j]);
+
+    for(int i=0;i<2;i++)
+        for(int j=0;j<2;j++)
+            sum[i][j] = a[i][j] + b[i][j];
+
+    printf("Result:\n");
+    for(int i=0;i<2;i++) {
+        for(int j=0;j<2;j++)
+            printf("%d ", sum[i][j]);
+        printf("\n");
+    }
+
+    return 0;
+}
+/* day 8 - pro 4*/
+#include <stdio.h>
+int main() {
+    int num, sum = 0;
+
+    printf("Enter number: ");
+    scanf("%d", &num);
+
+    for(int i=1; i<num; i++) {
+        if(num % i == 0)
+            sum += i;
+    }
+
+    if(sum == num)
+        printf("Perfect Number");
+    else
+        printf("Not Perfect");
+
+    return 0;
+}
+/* day 8- pro 5*/
+#include <stdio.h>
+int main() {
+    int a, b;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    printf("After swap: %d %d", a, b);
+    return 0;
+}
