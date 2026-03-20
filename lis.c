@@ -336,3 +336,111 @@ int main() {
     printf("After swap: %d %d", a, b);
     return 0;
 }
+/* day 9- pro 1*/
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    int i, len, flag = 1;
+
+    printf("Enter string: ");
+    scanf("%s", str);
+
+    len = strlen(str);
+
+    for(i = 0; i < len/2; i++) {
+        if(str[i] != str[len-i-1]) {
+            flag = 0;
+            break;
+        }
+    }
+
+    if(flag)
+        printf("Palindrome");
+    else
+        printf("Not Palindrome");
+
+    return 0;
+}
+/* day 9- pro 2*/
+#include <stdio.h>
+
+int main() {
+    int arr[5], i;
+
+    printf("Enter 5 elements:\n");
+    for(i = 0; i < 5; i++)
+        scanf("%d", &arr[i]);
+
+    printf("Reversed array:\n");
+    for(i = 4; i >= 0; i--)
+        printf("%d ", arr[i]);
+
+    return 0;
+}
+/* day 9- pro 3*/
+#include <stdio.h>
+
+int main() {
+    int arr[5], i, key, found = 0;
+
+    printf("Enter elements:\n");
+    for(i = 0; i < 5; i++)
+        scanf("%d", &arr[i]);
+
+    printf("Enter number to search: ");
+    scanf("%d", &key);
+
+    for(i = 0; i < 5; i++) {
+        if(arr[i] == key) {
+            found = 1;
+            break;
+        }
+    }
+
+    if(found)
+        printf("Element found");
+    else
+        printf("Not found");
+
+    return 0;
+}
+/* day 9- pro 4*/
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i, count = 1;
+
+    printf("Enter sentence: ");
+    fgets(str, sizeof(str), stdin);
+
+    for(i = 0; str[i] != '\0'; i++) {
+        if(str[i] == ' ')
+            count++;
+    }
+
+    printf("Number of words: %d", count);
+    return 0;
+}
+/* day 9- pro 5*/
+#include <stdio.h>
+
+int main() {
+    int a[2][2], i, j;
+
+    printf("Enter matrix:\n");
+    for(i=0;i<2;i++)
+        for(j=0;j<2;j++)
+            scanf("%d", &a[i][j]);
+
+    printf("Transpose:\n");
+    for(i=0;i<2;i++) {
+        for(j=0;j<2;j++)
+            printf("%d ", a[j][i]);
+        printf("\n");
+    }
+
+    return 0;
+}
