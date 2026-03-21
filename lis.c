@@ -444,3 +444,95 @@ int main() {
 
     return 0;
 }
+/* day 10- pro 1*/
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i, count = 1;
+
+    printf("Enter sentence: ");
+    fgets(str, sizeof(str), stdin);
+
+    for(i = 0; str[i] != '\0'; i++) {
+        if(str[i] == ' ' || str[i] == '\n')
+            count++;
+    }
+
+    printf("Words = %d", count);
+    return 0;
+}
+/* day 10- pro 2*/
+#include <stdio.h>
+
+int main() {
+    int num, i, sum = 0;
+    printf("Enter number: ");
+    scanf("%d", &num);
+
+    for(i = 1; i < num; i++) {
+        if(num % i == 0)
+            sum += i;
+    }
+
+    if(sum == num)
+        printf("Perfect Number");
+    else
+        printf("Not Perfect");
+
+    return 0;
+}
+/* day 10- pro 3*/
+#include <stdio.h>
+
+int main() {
+    int n, i, j, coef = 1;
+    printf("Enter rows: ");
+    scanf("%d", &n);
+
+    for(i = 0; i < n; i++) {
+        coef = 1;
+        for(j = 0; j <= i; j++) {
+            printf("%d ", coef);
+            coef = coef * (i - j) / (j + 1);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+/* day 10- pro 4*/
+#include <stdio.h>
+
+int main() {
+    int a, b, gcd;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    for(int i = 1; i <= a && i <= b; i++) {
+        if(a % i == 0 && b % i == 0)
+            gcd = i;
+    }
+
+    printf("GCD = %d", gcd);
+    return 0;
+}
+/* day 10- pro 5*/
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    int i, len;
+
+    printf("Enter string: ");
+    scanf("%s", str);
+
+    len = strlen(str);
+
+    for(i = len - 1; i >= 0; i--) {
+        printf("%c", str[i]);
+    }
+
+    return 0;
+}
