@@ -536,3 +536,108 @@ int main() {
 
     return 0;
 }
+/* day 11- pro 1*/
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char words[5][20];
+    int k;
+
+    printf("Enter 5 words:\n");
+    for(int i=0;i<5;i++)
+        scanf("%s", words[i]);
+
+    printf("Enter k: ");
+    scanf("%d", &k);
+
+    for(int i=0;i<5;i++) {
+        if(strlen(words[i]) > k)
+            printf("%s\n", words[i]);
+    }
+    return 0;
+}
+/* day 11- pro 2*/
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100], ch;
+    int i, j = 0;
+
+    printf("Enter string: ");
+    scanf("%s", str);
+
+    printf("Enter character to remove: ");
+    scanf(" %c", &ch);
+
+    char result[100];
+
+    for(i = 0; str[i] != '\0'; i++) {
+        if(str[i] != ch) {
+            result[j++] = str[i];
+        }
+    }
+    result[j] = '\0';
+
+    printf("Result: %s", result);
+    return 0;
+}
+/* day 11- pro 3*/
+#include <stdio.h>
+
+int main() {
+    int arr[10], count = 0;
+
+    printf("Enter 10 elements:\n");
+    for(int i=0;i<10;i++)
+        scanf("%d", &arr[i]);
+
+    for(int i=0;i<10;i++) {
+        if(arr[i] == 2)
+            count++;
+    }
+
+    printf("2 appears %d times", count);
+    return 0;
+}
+/* day 11- pro 4*/
+#include <stdio.h>
+
+int main() {
+    float f, c;
+    printf("Enter Fahrenheit: ");
+    scanf("%f", &f);
+
+    c = (5.0/9.0) * (f - 32);
+    printf("Celsius: %.2f", c);
+
+    return 0;
+}
+/* day 11- pro 5*/
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    int i, flag = 1;
+
+    printf("Enter string: ");
+    scanf("%s", str);
+
+    int len = strlen(str);
+
+    for(i=0;i<len/2;i++) {
+        if(str[i] != str[len-i-1]) {
+            flag = 0;
+            break;
+        }
+    }
+
+    if(flag)
+        printf("Palindrome");
+    else
+        printf("Not Palindrome");
+
+    return 0;
+}
