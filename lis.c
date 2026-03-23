@@ -641,3 +641,39 @@ int main() {
 
     return 0;
 }
+/* day 12- pro 1*/
+#include <stdio.h>
+
+int main() {
+    int year;
+
+    printf("Enter a year: ");
+    scanf("%d", &year);
+
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+        printf("Leap Year");
+    else
+        printf("Not a Leap Year");
+
+    return 0;
+}
+/* day 12- pro 2*/
+#include <stdio.h>
+
+int main() {
+    float amount, gst_rate, gst, total;
+
+    printf("Enter original amount: ");
+    scanf("%f", &amount);
+
+    printf("Enter GST rate (%%): ");
+    scanf("%f", &gst_rate);
+
+    gst = (amount * gst_rate) / 100;
+    total = amount + gst;
+
+    printf("GST Amount: %.2f\n", gst);
+    printf("Total Amount: %.2f\n", total);
+
+    return 0;
+}
