@@ -322,20 +322,6 @@ int main() {
 
     return 0;
 }
-/* day 8- pro 5*/
-#include <stdio.h>
-int main() {
-    int a, b;
-    printf("Enter two numbers: ");
-    scanf("%d %d", &a, &b);
-
-    a = a + b;
-    b = a - b;
-    a = a - b;
-
-    printf("After swap: %d %d", a, b);
-    return 0;
-}
 /* day 9- pro 1*/
 #include <stdio.h>
 #include <string.h>
@@ -614,33 +600,6 @@ int main() {
 
     return 0;
 }
-/* day 11- pro 5*/
-#include <stdio.h>
-#include <string.h>
-
-int main() {
-    char str[100];
-    int i, flag = 1;
-
-    printf("Enter string: ");
-    scanf("%s", str);
-
-    int len = strlen(str);
-
-    for(i=0;i<len/2;i++) {
-        if(str[i] != str[len-i-1]) {
-            flag = 0;
-            break;
-        }
-    }
-
-    if(flag)
-        printf("Palindrome");
-    else
-        printf("Not Palindrome");
-
-    return 0;
-}
 /* day 12- pro 1*/
 #include <stdio.h>
 
@@ -674,6 +633,47 @@ int main() {
 
     printf("GST Amount: %.2f\n", gst);
     printf("Total Amount: %.2f\n", total);
+
+    return 0;
+}
+/* day 13- pro 1*/
+#include <stdio.h>
+int main() {
+    int a, b;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    printf("After swap: %d %d", a, b);
+    return 0;
+}
+/* day 13- pro 2*/
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    int i, flag = 1;
+
+    printf("Enter string: ");
+    scanf("%s", str);
+
+    int len = strlen(str);
+
+    for(i=0;i<len/2;i++) {
+        if(str[i] != str[len-i-1]) {
+            flag = 0;
+            break;
+        }
+    }
+
+    if(flag)
+        printf("Palindrome");
+    else
+        printf("Not Palindrome");
 
     return 0;
 }
