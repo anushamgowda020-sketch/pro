@@ -677,3 +677,44 @@ int main() {
 
     return 0;
 }
+/* day 14 - pro 1*/
+#include <stdio.h>
+
+int main() {
+    int arr[] = {10, 20, 4, 45, 99};
+    int n = 5;
+
+    int largest = arr[0], second = -1;
+
+    for(int i = 1; i < n; i++) {
+        if(arr[i] > largest) {
+            second = largest;
+            largest = arr[i];
+        } else if(arr[i] > second && arr[i] != largest) {
+            second = arr[i];
+        }
+    }
+
+    printf("Second Largest: %d", second);
+    return 0;
+}
+/* day 14- pro 2*/
+#include <stdio.h>
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int n = 5;
+
+    int last = arr[n - 1];
+
+    for(int i = n - 1; i > 0; i--) {
+        arr[i] = arr[i - 1];
+    }
+
+    arr[0] = last;
+
+    for(int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+
+    return 0;
+}
