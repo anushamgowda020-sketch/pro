@@ -718,3 +718,42 @@ int main() {
 
     return 0;
 }
+/* day 15- pro 1*/
+#include <stdio.h>
+
+int main() {
+    int arr[] = {1, 2, 3, 2, 4, 1};
+    int n = 6;
+
+    for(int i = 0; i < n; i++) {
+        for(int j = i + 1; j < n; j++) {
+            if(arr[i] == arr[j]) {
+                printf("Duplicate: %d\n", arr[i]);
+                break;
+            }
+        }
+    }
+    return 0;
+}
+/* day 15- pro 2*/
+#include <stdio.h>
+
+int main() {
+    int arr[] = {0, 1, 0, 3, 12};
+    int n = 5, count = 0;
+
+    for(int i = 0; i < n; i++) {
+        if(arr[i] != 0) {
+            arr[count++] = arr[i];
+        }
+    }
+
+    while(count < n) {
+        arr[count++] = 0;
+    }
+
+    for(int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+
+    return 0;
+}
