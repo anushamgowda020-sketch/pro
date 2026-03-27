@@ -757,3 +757,20 @@ int main() {
 
     return 0;
 }
+/* day 16- pro 1*/
+#include <stdio.h>
+
+int main() {
+    int arr1[] = {1, 2, 3, 4};
+    int arr2[] = {3, 4, 5, 6};
+
+    for(int i = 0; i < 4; i++) {
+        for(int j = 0; j < 4; j++) {
+            if(arr1[i] == arr2[j]) {
+                printf("%d ", arr1[i]);
+            }
+        }
+    }
+
+    return 0;
+}
