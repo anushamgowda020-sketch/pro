@@ -774,3 +774,13 @@ int main() {
 
     return 0;
 }
+/* day 17 - pro 1
+  include<stdio.h>
+  void main()
+{
+float=a,b,result
+printf("Enter the 2 operands")
+  scanf("%d %d:",&a,&b)
+  result=a+b
+  printf("/n Result= ",result)
+  }
