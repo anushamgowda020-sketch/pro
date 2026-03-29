@@ -41,24 +41,6 @@ int main() {
 
     return 0;
 }
-/* day 5 - pro 3*/
-#include <stdio.h>
-
-int main() {
-    float base, height, area;
-
-    printf("Enter base of the triangle: ");
-    scanf("%f", &base);
-
-    printf("Enter height of the triangle: ");
-    scanf("%f", &height);
-
-    area = 0.5 * base * height;
-
-    printf("Area of the triangle = %.2f", area);
-
-    return 0;
-}
 /* day 6 - pro 1*/
 #include <stdio.h>
 
@@ -784,3 +766,22 @@ printf("Enter the 2 operands")
   result=a+b
   printf("/n Result= ",result)
   }
+/* day 18 
+  /* day 5 - pro 3*/
+#include <stdio.h>
+
+int main() {
+    float base, height, area;
+
+    printf("Enter base of the triangle: ");
+    scanf("%f", &base);
+
+    printf("Enter height of the triangle: ");
+    scanf("%f", &height);
+
+    area = 0.5 * base * height;
+
+    printf("Area of the triangle = %.2f", area);
+
+    return 0;
+}
