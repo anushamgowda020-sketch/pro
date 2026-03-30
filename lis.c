@@ -767,7 +767,7 @@ printf("Enter the 2 operands")
   printf("/n Result= ",result)
   }
 /* day 18 
-  /* day 5 - pro 3*/
+  
 #include <stdio.h>
 
 int main() {
@@ -782,6 +782,38 @@ int main() {
     area = 0.5 * base * height;
 
     printf("Area of the triangle = %.2f", area);
+
+    return 0;
+}
+/* day 19*/
+#include <stdio.h>
+
+int main() {
+    int n, arr[100], visited[100];
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter elements:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+        visited[i] = 0;
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (visited[i] == 1)
+            continue;
+
+        int count = 1;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[i] == arr[j]) {
+                count++;
+                visited[j] = 1;
+            }
+        }
+
+        printf("%d occurs %d times\n", arr[i], count);
+    }
 
     return 0;
 }
