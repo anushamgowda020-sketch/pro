@@ -817,3 +817,38 @@ int main() {
 
     return 0;
 }
+/* day 20 */
+#include <stdio.h>
+
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int a[] = {1, 5, 9};
+    int b[] = {2, 3, 8};
+    int n = 3, m = 3;
+
+    for (int i = 0; i < n; i++) {
+        if (a[i] > b[0]) {
+            swap(&a[i], &b[0]);
+
+            int first = b[0];
+            int k;
+            for (k = 1; k < m && b[k] < first; k++) {
+                b[k - 1] = b[k];
+            }
+            b[k - 1] = first;
+        }
+    }
+
+    printf("Merged arrays:\n");
+    for (int i = 0; i < n; i++)
+        printf("%d ", a[i]);
+    for (int i = 0; i < m; i++)
+        printf("%d ", b[i]);
+
+    return 0;
+}
