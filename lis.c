@@ -1,4 +1,4 @@
-#include<stdio.h>
+/*#include<stdio.h>
 void main()
 {
   double cgpa1,cgpa2;
@@ -852,3 +852,4 @@ int main() {
 
     return 0;
 }
+/*day 21 */
