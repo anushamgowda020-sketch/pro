@@ -889,3 +889,27 @@ int main() {
     return 0;
 }
 /* day 22 */
+#include <stdio.h>
+
+int main() {
+    FILE *fp;
+    char ch;
+    int words = 0;
+
+    fp = fopen("test.txt", "r");
+
+    if (fp == NULL) {
+        printf("File not found");
+        return 0;
+    }
+
+    while ((ch = fgetc(fp)) != EOF) {
+        if (ch == ' ' || ch == '\n')
+            words++;
+    }
+
+    printf("Word count: %d", words + 1);
+
+    fclose(fp);
+    return 0;
+}
