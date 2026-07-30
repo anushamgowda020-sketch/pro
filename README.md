@@ -1,2 +1,2 @@
-# pro
+C-Programming-Practice
 c program
